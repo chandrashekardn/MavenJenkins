@@ -1,0 +1,13 @@
+trigger:
+- master
+
+pool:
+  name: Default
+
+steps:
+- script: echo Myfirst Azure Pipeline for maven project
+  displayName: 'Run'
+- script: mvn clean install
+  displayName: 'Build'
+- script: java -jar target/Maven-Jenkin-Pipeline-1.0-SNAPSHOT.jar
+  displayName: 'Running'
