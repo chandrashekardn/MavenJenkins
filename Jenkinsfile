@@ -5,7 +5,7 @@ pipeline{
 	}
 	stages{
 		stage('Checkout'){
-			steps{git branch: master 'https://github.com/chandrashekardn/MavenJenkins.git'}
+			steps{git branch: master,url: 'https://github.com/chandrashekardn/MavenJenkins.git'}
 		}
 		stage('Build'){
 			steps{sh 'mvn clean package'}
