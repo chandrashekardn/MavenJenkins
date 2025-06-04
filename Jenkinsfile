@@ -14,7 +14,7 @@ pipeline{
 			steps{sh 'mvn test'}
 		}
 		stage('Run Application'){
-			steps{sh 'java -jar target/.jar'}
+			steps{sh 'java -jar target/MavenJenkins-1.0-SNAPSHOT.jar'}
 		}
 	}
 	post{
